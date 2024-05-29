@@ -3,17 +3,20 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Shravani2621/Selenium_Jenkins.git'
+                // No need to clone again if using SCM configuration at the beginning
+                echo 'Cloning the repository...'
             }
         }
         stage('Install dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                // Use 'bat' for Windows command
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Run tests') {
             steps {
-                sh 'python -m unittest discover'
+                // Use 'bat' for Windows command
+                bat 'python -m unittest discover'
             }
         }
     }
