@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run tests') {
             steps {
-                bat 'python -m unittest discover -s selenium-python'
+                bat 'python -m unittest discover -s tests'
             }
         }
     }
