@@ -3,21 +3,24 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                // No need to clone again if using SCM configuration at the beginning
                 echo 'Cloning the repository...'
+                // The repository is already cloned by the Declarative: Checkout SCM step
             }
         }
         stage('Install dependencies') {
             steps {
-                // Use 'bat' for Windows command
                 bat 'pip install -r requirements.txt'
             }
         }
         stage('Run tests') {
             steps {
-                // Use 'bat' for Windows command
-                bat 'python -m unittest discover'
+                bat 'python -m unittest discover -s selenium-python'
             }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'report.html', allowEmptyArchive: true
         }
     }
 }
