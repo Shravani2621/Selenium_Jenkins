@@ -1,5 +1,4 @@
 # Creating an Item
-#Author Sanchita
 
 import time
 
