@@ -1,4 +1,4 @@
-# Editing and Modifying Attributes
+# Revise an Item
 import time
 from selenium import webdriver
 import pytest
@@ -20,10 +20,10 @@ def test():
     driver = webdriver.Edge()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
-    driver.set_window_size(1500, 1100)
+    driver.set_window_size(1500, 900)
     time.sleep(2)
 
-    path = r"C:\Users\sss927879\Desktop\Book1.xlsx"
+    path = r"C:\Users\sss927832\OneDrive - Tata Technologies\Desktop\Book1.xlsx"
     b = openpyxl.load_workbook(path)
     sheet = b.active
     c1 = sheet.cell(row=5, column=1)
@@ -34,15 +34,13 @@ def test():
     # driver.find_element(By.NAME, "username").send_keys("infodba")
     # driver.find_element(By.NAME, "password").send_keys("infodba")
     # time.sleep(5)
-    # driver.find_element(By.CSS_SELECTOR, ".sw-button.accent-caution").click()
-    # time.sleep(10)
-    # driver.find_element(By.CSS_SELECTOR,
-    #                     ".sw-column.aw-tile-tileContainer.aw-theme-locationsTile.aw-tile-smallSize").click()
-    # time.sleep(15)
-    # driver.find_element(By.CSS_SELECTOR, ".sw-aria-border:nth-child(4)").click()
-    # time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".sw-button.accent-caution").click()
     time.sleep(10)
+    # driver.find_element(By.CSS_SELECTOR,
+    #                     ".sw-column.aw-tile-tileContainer.aw-theme-locationsTile.aw-tile-smallSize").click()
+    # time.sleep(5)
+    # driver.find_element(By.CSS_SELECTOR, ".sw-aria-border:nth-child(10)").click()
+    # time.sleep(10)
     driver.find_element(By.CSS_SELECTOR, ".aw-uiwidgets-searchBox").click()
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".aw-search-globalSearchLinksPanel1").click()
@@ -67,35 +65,11 @@ def test():
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".sw-button > div").click()
     time.sleep(10)
-    # driver.find_element(By.CSS_SELECTOR, ".aw-commands-commandIconButton.aw-commands-command.aw-commandId"
-    #                                      "-Awp0OpenGroup.aw-commands-commandWrapperVertical").click()
-    # time.sleep(5)
-    # driver.find_element(By.CSS_SELECTOR, ".aw-popup-command-bar:nth-child(1)").click()
-    # time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-commandId-Awp0OpenGroup").click()
-    time.sleep(15)
-    driver.find_element(By.CSS_SELECTOR, ".aw-list-command:nth-child(1)").click()
+    driver.find_element(By.CSS_SELECTOR, "#ObjectSet_1_Provider_row2_col2").click()
     time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-commandId-Awp0EditGroup").click()
+    driver.find_element(By.CSS_SELECTOR, ".aw-commandId-Awp0NewGroup").click()
     time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-list-command:nth-child(2)").click()
+    driver.find_element(By.CSS_SELECTOR, ".aw-list-command:nth-child(3)").click()
     time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-commandId-Awp0EditGroup").click()
-    time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-list-command:nth-child(1) > .sw-aria-border").click()
-    time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-layout-workareaMain").click()
-    time.sleep(5)
-    driver.find_element(By.NAME, "object_name").clear()
-    driver.find_element(By.NAME, "object_name").send_keys("NewItemTest")
-    time.sleep(5)
-    driver.find_element(By.NAME, "object_desc").send_keys("New Item to test.")
-    time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-commandId-Awp0EditGroup").click()
-    time.sleep(3)
-    driver.find_element(By.CSS_SELECTOR, ".aw-list-command:nth-child(1)").click()
-    time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-commandId-Awp0EditGroup").click()
-    time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".aw-list-command:nth-child(2)").click()
+    driver.find_element(By.CSS_SELECTOR, ".sw-button").click()
     time.sleep(10)
