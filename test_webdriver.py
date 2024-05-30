@@ -10,11 +10,10 @@ edge_options = webdriver.EdgeOptions()
 driver = webdriver.Edge(executable_path=edge_driver_path, options=edge_options)
 
 # Navigate to a webpage
-driver.get('https://www.youtube.com')
+driver.get('https://www.example.com')
 
 # Print the title of the webpage
 print("Title of the webpage:", driver.title)
 
 # Close the browser
 driver.quit()
-
