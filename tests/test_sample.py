@@ -20,7 +20,7 @@ def wait_for_window(self, timeout=2):
 
 #@pytest.mark.login
 def test():
-    driver = "C:\\Users\\sss927832\\Downloads\\edgedriver\\msedgedriver.exe"
+    driver = webdriver.Edge()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
