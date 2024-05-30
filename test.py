@@ -5,7 +5,6 @@ edge_driver_path = 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\edgedriver\\msedg
 
 # Initialize the EdgeOptions
 edge_options = webdriver.EdgeOptions()
-edge_options.add_argument('headless')
 
 # Specify the path to the WebDriver executable
 edge_options.binary_location = edge_driver_path
