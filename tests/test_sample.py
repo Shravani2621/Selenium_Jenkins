@@ -6,9 +6,12 @@ from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
-@pytest.fixture
+#@pytest.fixture
 def setup():
-    driver = webdriver.Edge(EdgeChromiumDriverManager().install(), options=webdriver.EdgeOptions())
+    options = webdriver.EdgeOptions()
+    driver = webdriver.Edge(EdgeChromiumDriverManager().install(), options=options)
+
+    #driver = webdriver.Edge(EdgeChromiumDriverManager().install(), options=webdriver.EdgeOptions())
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
