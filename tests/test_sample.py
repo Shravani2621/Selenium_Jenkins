@@ -16,12 +16,9 @@ def wait_for_window(self, timeout=2):
     if len(wh_now) > len(wh_then):
         return set(wh_now).difference(set(wh_then)).pop()
 
-edge_driver_path = 'C:\\Users\\sss927832\\Downloads\\edgedriver_win64\\msedgedriver.exe'
-edge_options = webdriver.EdgeOptions()
 
-@pytest.mark.login
+#@pytest.mark.login
 def test():
-    driver = webdriver.Edge(executable_path=edge_driver_path, options=edge_options)
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
