@@ -17,8 +17,12 @@ from selenium.webdriver.edge.service import Service
 # Specify the path to the msedgedriver executable
 edge_service = Service('C:\\Users\\sss927832\\Downloads\\edgedriver\\msedgedriver.exe')
 
+options = Options()
+options.add_argument("--disable-gpu")
+options.add_argument("--no-sandbox")
+
 # Initialize the Edge WebDriver
-driver = webdriver.Edge(service=edge_service)
+driver = webdriver.Edge(service=edge_service, options=options)
 
 def get_trulia_estimate(address):
     driver.get('https://www.trulia.com/')
