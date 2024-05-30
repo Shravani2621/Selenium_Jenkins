@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // Define the path to your Edge WebDriver executable
-        EDGE_DRIVER_PATH = 'C:\Users\sss927832\Downloads\edgedriver_win6\msedgedriver.exe'
+        EDGE_DRIVER_PATH = 'C:\\Users\\sss927832\\Downloads\\edgedriver_win6\\msedgedriver.exe'
     }
     
     stages {
