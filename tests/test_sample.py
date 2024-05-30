@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
-#@pytest.fixture
+@pytest.fixture
 def setup():
     options = webdriver.EdgeOptions()
     driver = webdriver.Edge(EdgeChromiumDriverManager().install(), options=options)
