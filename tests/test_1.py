@@ -11,7 +11,15 @@ import os
 from datetime import datetime
 from selenium.webdriver import ActionChains
 
-driver = webdriver.Edge(executable_path = 'C:\\Users\\sss927832\\Downloads\\edgedriver\\msedgedriver.exe')
+from selenium import webdriver
+from selenium.webdriver.edge.service import Service
+
+# Specify the path to the msedgedriver executable
+edge_service = Service('C:\\Users\\sss927832\\Downloads\\edgedriver\\msedgedriver.exe')
+
+# Initialize the Edge WebDriver
+driver = webdriver.Edge(service=edge_service)
+
 def get_trulia_estimate(address):
     driver.get('https://www.trulia.com/')
     print(address)
