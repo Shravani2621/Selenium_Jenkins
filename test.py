@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 # Path to the Microsoft Edge WebDriver executable
-edge_driver_path = 'D:\\edgedriver_win64\\msedgedriver.exe'
+edge_driver_path = 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\edgedriver\\msedgedriver.exe'
 
 # Initialize the EdgeOptions
 edge_options = webdriver.EdgeOptions()
