@@ -4,7 +4,5 @@ pytest-html==3.1.1
 openpyxl
 allure-pytest
 pynput==1.7.7
-multi-key-dict==2.0.3
-python-jenkins==1.7.0
 six==1.16.0
 
