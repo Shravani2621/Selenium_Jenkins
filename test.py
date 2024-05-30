@@ -1,17 +1,19 @@
 from selenium import webdriver
-from selenium.webdriver.edge.service import Service
 
 # Path to the Microsoft Edge WebDriver executable
 edge_driver_path = 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\edgedriver\\msedgedriver.exe'
 
-# Initialize the Edge Service
-edge_service = Service(edge_driver_path)
+# Initialize the EdgeOptions
+edge_options = webdriver.EdgeOptions()
 
-# Start the Edge Service
-edge_service.start()
+# Specify the path to the WebDriver executable
+edge_options.binary_location = edge_driver_path
 
-# Initialize the Edge WebDriver with Edge Service
-driver = webdriver.Edge(service=edge_service)
+# Set the WebDriver executable path in EdgeOptions
+edge_options.use_chromium = True  # Set to True if using the Chromium version of Edge
+
+# Initialize the Edge WebDriver with EdgeOptions
+driver = webdriver.Edge(executable_path=edge_driver_path, options=edge_options)
 
 # Navigate to a webpage
 driver.get('https://www.youtube.com')
@@ -21,6 +23,3 @@ print("Title of the webpage:", driver.title)
 
 # Close the browser
 driver.quit()
-
-# Stop the Edge Service
-edge_service.stop()
