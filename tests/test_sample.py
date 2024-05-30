@@ -8,7 +8,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 @pytest.fixture
 def setup():
-    driver = webdriver.Edge(EdgeChromiumDriverManager().install())
+    driver = webdriver.Edge(EdgeChromiumDriverManager().install(), options=webdriver.EdgeOptions())
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
