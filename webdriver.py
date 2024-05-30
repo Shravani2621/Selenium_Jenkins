@@ -1,7 +1,3 @@
-pip install selenium
-pip install pytest
-pip istall openpyxl
-pip install pynput
 
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
