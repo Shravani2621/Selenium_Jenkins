@@ -6,6 +6,8 @@ from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 import openpyxl
 from selenium.webdriver import Chrome
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def wait_for_window(self, timeout=2):
@@ -50,9 +52,9 @@ def test():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
     time.sleep(5)
-    driver.find_element(By.NAME, "object_name").click()
-    time.sleep(2)
-    driver.find_element(By.NAME, "object_name").send_keys("TestPart")
-    time.sleep(15)
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.NAME, "object_name"))
+    )
+    element.send_keys("TestPart")
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
     time.sleep(5)
