@@ -50,6 +50,8 @@ def test():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
     time.sleep(15)
+    driver.find_element(By.NAME, "object_name").click()
+    time.sleep(2)
     driver.find_element(By.NAME, "object_name").send_keys("TestPart")
     time.sleep(15)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
