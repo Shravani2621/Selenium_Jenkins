@@ -23,8 +23,7 @@ def test():
     driver = webdriver.Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
-    driver.set_window_size(1192, 680)
-    driver.get(domain)
+    driver.set_window_size(1192, 780)
     time.sleep(2)
     path = r"C:\Users\sss927832\Desktop\Book1.xlsx"
     b = openpyxl.load_workbook(path)
