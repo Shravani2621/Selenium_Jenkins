@@ -61,5 +61,6 @@ def test():
         EC.presence_of_element_located((By.NAME, "object_name"))
     )
     element.send_keys("Item2")
+    time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
     time.sleep(15)
