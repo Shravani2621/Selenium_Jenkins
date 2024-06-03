@@ -23,7 +23,7 @@ def test():
     driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
-    time.sleep(2)
+    time.sleep(10)
     path = r"C:\Users\sss927832\Desktop\Book1.xlsx"
     b = openpyxl.load_workbook(path)
     sheet = b.active
@@ -32,18 +32,18 @@ def test():
     driver.find_element(By.NAME, "username").send_keys(c1.value)
     # driver.find_element(By.NAME, "password").send_keys("infodba")
     driver.find_element(By.NAME, "password").send_keys(c1.value)
-    time.sleep(5)
+    time.sleep(10)
     driver.find_element(By.CSS_SELECTOR, ".sw-button.accent-caution").click()
     time.sleep(10)
     driver.find_element(By.CSS_SELECTOR,
                         ".sw-column.aw-tile-tileContainer.aw-theme-locationsTile.aw-tile-smallSize").click()
-    time.sleep(5)
+    time.sleep(10)
     # driver.find_element(By.CSS_SELECTOR, "aw-commands-commandIconButton.aw-commands-command.aw-commandId"
     #                                      "-Awp0ShowCreateObject.aw-commands-commandWrapperHorizontal").click()
     # driver.find_element(By.CSS_SELECTOR, "aw-commandIcon").click()
     driver.find_element(By.CSS_SELECTOR, ".aw-commands-commandIconButton.aw-commands-command.aw-commandId"
                                          "-Awp0ShowCreateObject.aw-commands-commandWrapperHorizontal").click()
-    time.sleep(5)
+    time.sleep(10)
     driver.find_element(By.XPATH, "//div[@class='sw-lov-container aw-widgets-droppable']/child::input").send_keys(
         "Item")
     # driver.find_element(By.CSS_SELECTOR, ".sw-property.sw-component.aw-widgets-droppable > "
@@ -53,8 +53,8 @@ def test():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
     # driver.find_element(By.CSS_SELECTOR, ".sw-aria-border.aw-widgets-cellListItem.aw-widgets-cellTop").click()
-    time.sleep(5)
+    time.sleep(10)
     driver.find_element(By.NAME, "object_name").send_keys("Item2")
-    time.sleep(5)
+    time.sleep(10)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
-    time.sleep(5)
+    time.sleep(10)
