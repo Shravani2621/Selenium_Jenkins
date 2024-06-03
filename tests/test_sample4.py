@@ -61,7 +61,7 @@ def test():
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".sw-property:nth-child(2) > .sw-property-val").click()
     time.sleep(5)
-    driver.find_element(By.CSS_SELECTOR, ".sw-property:nth-child(2) > .sw-property-val").send_keys("TestItemEP")
+    driver.find_element(By.CSS_SELECTOR, ".sw-property:nth-child(2) > .sw-property-val").send_keys("Item1")
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".sw-button > div").click()
     time.sleep(10)
