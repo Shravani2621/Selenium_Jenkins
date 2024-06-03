@@ -6,7 +6,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 import openpyxl
-
+from selenium.webdriver import Chrome
 
 def wait_for_window(self, timeout=2):
     time.sleep(round(timeout / 1000))
@@ -18,13 +18,13 @@ def wait_for_window(self, timeout=2):
 
 #@pytest.mark.login
 def test():
-    driver = webdriver.Edge()
+    driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     driver.set_window_size(1192, 680)
     time.sleep(2)
 
-    path = r"C:\Users\sss927832\OneDrive - Tata Technologies\Desktop\Book1.xlsx"
+    path = r"C:\Users\sss927832\Desktop\Book1.xlsx"
     b = openpyxl.load_workbook(path)
     sheet = b.active
     c1 = sheet.cell(row=5, column=1)
