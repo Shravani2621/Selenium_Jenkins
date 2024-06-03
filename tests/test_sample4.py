@@ -7,6 +7,7 @@ from pynput.keyboard import Key, Controller
 import openpyxl
 from selenium.webdriver import Chrome
 
+
 def wait_for_window(self, timeout=2):
     time.sleep(round(timeout / 1000))
     wh_now = self.driver.window_handles
@@ -15,7 +16,7 @@ def wait_for_window(self, timeout=2):
         return set(wh_now).difference(set(wh_then)).pop()
 
 
-#@pytest.mark.login
+# @pytest.mark.login
 def test():
     driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
