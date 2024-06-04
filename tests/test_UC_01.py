@@ -54,10 +54,10 @@ def test():
     if driver.find_element(By.XPATH, "//div[@class='sw-lov-container aw-widgets-droppable']/child::input") == "true":
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-    time.sleep(10)
     wait = WebDriverWait(driver, 10)  # 10 seconds timeout
     element = wait.until(EC.element_to_be_clickable((By.NAME, 'object_name')))
     element.click()
+    time.sleep(3)
     driver.find_element(By.NAME, "object_name").send_keys(c2.value)
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
