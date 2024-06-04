@@ -5,6 +5,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 import openpyxl
+from selenium.webdriver import Chrome
 
 
 def wait_for_window(self, timeout=2):
@@ -15,9 +16,9 @@ def wait_for_window(self, timeout=2):
         return set(wh_now).difference(set(wh_then)).pop()
 
 
-@pytest.mark.login
+# @pytest.mark.login
 def test():
-    driver = webdriver.Chrome()
+    driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
@@ -36,7 +37,8 @@ def test():
     # time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".sw-button.accent-caution").click()
     time.sleep(40)
-    driver.find_element(By.CSS_SELECTOR, ".sw-column.aw-tile-tileContainer.aw-theme-locationsTile.aw-tile-smallSize").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".sw-column.aw-tile-tileContainer.aw-theme-locationsTile.aw-tile-smallSize").click()
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".aw-commands-commandIconButton.aw-commands-command.aw-commandId"
                                          "-Awp0ShowCreateObject.aw-commands-commandWrapperHorizontal").click()

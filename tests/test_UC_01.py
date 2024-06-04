@@ -6,11 +6,12 @@ import pytest
 from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 import openpyxl
+from selenium.webdriver import Chrome
 
 
-@pytest.mark.login
+# @pytest.mark.login
 def test():
-    driver = webdriver.Chrome()
+    driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)

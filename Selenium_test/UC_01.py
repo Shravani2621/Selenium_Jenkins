@@ -22,7 +22,7 @@ def wait_for_window(self, timeout=2):
 
 #@pytest.mark.login
 def test():
-    driver = webdriver.Chrome()
+    driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     driver.set_window_size(1500, 1100)
