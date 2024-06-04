@@ -53,9 +53,8 @@ def test():
     keyboard = Controller()
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
-    time.sleep(5)
-
+    time.sleep(15)
     driver.find_element(By.NAME, "object_name").send_keys(c2.value)
-    time.sleep(5)
+    time.sleep(15)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
     time.sleep(5)
