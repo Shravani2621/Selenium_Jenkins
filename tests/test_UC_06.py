@@ -20,7 +20,7 @@ def test():
     driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
-    driver.set_window_size(1150, 680)
+    driver.set_window_size(1150, 600)
     time.sleep(20)
 
     path = r"C:\Users\sss927832\Selenium+TC\Selenium+TC\Book1.xlsx"
