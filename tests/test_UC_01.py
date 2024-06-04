@@ -7,6 +7,8 @@ from selenium.webdriver.common.by import By
 from pynput.keyboard import Key, Controller
 import openpyxl
 from selenium.webdriver import Chrome
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 # @pytest.mark.login
@@ -53,8 +55,8 @@ def test():
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
     time.sleep(10)
-    element = driver.find_element(By.NAME, "object_name")
-    driver.execute_script("arguments[0].scrollIntoView();", element)
+    wait = WebDriverWait(driver, 10)  # 10 seconds timeout
+    element = wait.until(EC.element_to_be_clickable((By.NAME, 'object_name')))
     element.click()
     driver.find_element(By.NAME, "object_name").send_keys(c2.value)
     time.sleep(5)
