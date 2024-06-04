@@ -23,7 +23,7 @@ def test():
     driver.set_window_size(1500, 1100)
     time.sleep(2)
 
-    path = r"Book1.xlsx"
+    path = r"C:\Users\sss927832\Selenium+TC\Selenium+TC\Book1.xlsx"
     b = openpyxl.load_workbook(path)
     sheet = b.active
     c1 = sheet.cell(row=2, column=5)
@@ -82,7 +82,7 @@ def test():
     time.sleep(5)
     keyboard = Controller()
     # keyboard.type("C:\\Users\\sss927879\\Desktop\\test.txt")
-    keyboard.type("C:\\Users\\sss927879\\Selenium+TC\\test.txt")
+    keyboard.type("C:\\Users\\sss927832\\Selenium+TC\\Selenium+TC\\test.txt")
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
     time.sleep(15)

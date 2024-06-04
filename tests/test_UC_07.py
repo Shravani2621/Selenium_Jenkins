@@ -16,7 +16,7 @@ def test():
     driver.set_window_size(1500, 900)
     time.sleep(2)
 
-    path = r"Book1.xlsx"
+    path = r"C:\Users\sss927832\Selenium+TC\Selenium+TC\Book1.xlsx"
     b = openpyxl.load_workbook(path)
     sheet = b.active
     c1 = sheet.cell(row=2, column=5)
