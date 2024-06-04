@@ -20,7 +20,7 @@ def test():
     driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
-    driver.set_window_size(1192, 680)
+    driver.set_window_size(1150, 680)
     time.sleep(20)
 
     path = r"C:\Users\sss927832\Selenium+TC\Selenium+TC\Book1.xlsx"
@@ -85,6 +85,6 @@ def test():
     keyboard.type("C:\\Users\\sss927832\\Selenium+TC\\Selenium+TC\\test.txt")
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
-    time.sleep(15)
-    driver.find_element(By.CSS_SELECTOR, "sw-button").click()
-    time.sleep(10)
+    time.sleep(5)
+    driver.find_element(By.CSS_SELECTOR, ".sw-button").click()
+    time.sleep(5)
