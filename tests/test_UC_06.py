@@ -85,6 +85,6 @@ def test():
     keyboard.type("C:\\Users\\sss927832\\Selenium+TC\\Selenium+TC\\test.txt")
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
-    time.sleep(5)
+    time.sleep(15)
     driver.find_element(By.CSS_SELECTOR, ".sw-button").click()
-    time.sleep(5)
+    time.sleep(15)
