@@ -3,8 +3,10 @@ import time
 from selenium import webdriver
 import pytest
 from selenium.webdriver.common.by import By
+from selenium.webdriver import Chrome
 
-@pytest.mark.login
+
+# @pytest.mark.login
 def test():
     driver = webdriver.Edge()
     username = "traininguser"
@@ -32,4 +34,3 @@ def test():
     time.sleep(10)
     # driver.find_element(By.XPATH, "//td[9]/div/a/img").click()
     # time.sleep(25)
-

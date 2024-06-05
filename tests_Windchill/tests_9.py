@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 import pytest
 from selenium.webdriver.common.by import By
-
+from selenium.webdriver import Chrome
 
 def wait_for_window(self, timeout=2):
     time.sleep(round(timeout / 1000))
@@ -13,9 +13,9 @@ def wait_for_window(self, timeout=2):
         return set(wh_now).difference(set(wh_then)).pop()
 
 
-@pytest.mark.login
+# @pytest.mark.login
 def test():
-    driver = webdriver.Edge()
+    driver = Chrome()
     username = "traininguser"
     password = "traininguser"
     domain = "inblrwks-247927.tatatechnologies.com:8090/Windchill/app/"

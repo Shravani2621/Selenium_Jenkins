@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver import Chrome
 
 def wait_for_window(self, timeout=2):
     time.sleep(round(timeout / 1000))
@@ -18,7 +18,7 @@ def wait_for_window(self, timeout=2):
 
 @pytest.mark.login
 def test():
-    driver = webdriver.Edge()
+    driver = Chrome()
     username = "traininguser"
     password = "traininguser"
     domain = "inblrwks-247927.tatatechnologies.com:8090/Windchill/app/"

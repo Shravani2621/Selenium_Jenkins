@@ -3,11 +3,11 @@ import time
 from selenium import webdriver
 import pytest
 from selenium.webdriver.common.by import By
+from selenium.webdriver import Chrome
 
-
-@pytest.mark.login
+# @pytest.mark.login
 def test():
-    driver = webdriver.Chrome()
+    driver = Chrome()
     username = "traininguser"
     password = "traininguser"
     domain = "inblrwks-247927.tatatechnologies.com:8090/Windchill/app/"
