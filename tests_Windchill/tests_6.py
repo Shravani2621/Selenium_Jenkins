@@ -13,7 +13,7 @@ def wait_for_window(self, timeout=2):
         return set(wh_now).difference(set(wh_then)).pop()
 
 
-@pytest.mark.login
+# @pytest.mark.login
 def test():
     driver = Chrome()
     username = "traininguser"
