@@ -29,6 +29,6 @@ def test():
     driver.find_element(By.ID, "keywordkeywordField_SearchTextBox").send_keys("NewSeleniumTest")
     time.sleep(5)
     driver.find_element(By.ID, "searchExt").click()
-    time.sleep(80)
+    time.sleep(10)
     driver.find_element(By.CSS_SELECTOR, ".x-grid3-cell-inner.x-grid3-col-infoPageAction").click()
     time.sleep(10)
