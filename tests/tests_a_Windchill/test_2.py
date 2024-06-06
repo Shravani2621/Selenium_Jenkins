@@ -8,7 +8,7 @@ from selenium.webdriver import Chrome
 
 # @pytest.mark.login
 def test():
-    driver = webdriver.Edge()
+    driver = Chrome()
     username = "traininguser"
     password = "traininguser"
     domain = "inblrwks-247927.tatatechnologies.com:8090/Windchill/app/"
