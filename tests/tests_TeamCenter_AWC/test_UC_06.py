@@ -86,5 +86,5 @@ def test():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
     time.sleep(15)
-    driver.find_element(By.CSS_SELECTOR, ".sw-button").click()
+    driver.find_element(By.CSS_SELECTOR, ".sw-button > div").click()
     time.sleep(15)

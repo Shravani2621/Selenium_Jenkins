@@ -50,7 +50,7 @@ def test():
     if driver.find_element(By.XPATH, "//div[@class='sw-lov-container aw-widgets-droppable']/child::input") == "true":
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-    driver.find_element(By.NAME, "object_name").send_keys(c2.value)
+    driver.find_element(By.CSS_SELECTOR, ".sw-changed").send_keys(c2.value)
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
     time.sleep(5)

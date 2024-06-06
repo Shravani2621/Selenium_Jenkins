@@ -44,6 +44,7 @@ def test():
     driver.find_element(By.ID, "ext-comp-1058").click()
     time.sleep(5)
     p = driver.current_window_handle
+    time.sleep(10)
     chwd = driver.window_handles
     for w in chwd:
         # switch focus to child window
