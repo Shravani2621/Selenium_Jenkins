@@ -46,23 +46,11 @@ def test():
     time.sleep(5)
     p = driver.current_window_handle
     time.sleep(10)
-    max_attempts = 3
-    attempt = 1
-    while attempt <= max_attempts:
-        try:
-            chwd = driver.window_handles
-            break  # If successful, break out of the loop
-        except TimeoutException:
-            print(f"Attempt {attempt} failed. Retrying...")
-            time.sleep(5)  # Wait for a few seconds before retrying
-            attempt += 1
-    #chwd = driver.window_handles
-    #for w in chwd:
-        # switch focus to child window
-    #    if w != p:
-    #       driver.switch_to.window(w)
-
-    time.sleep(5)
+    chwd = driver.window_handles
+    for w in chwd:
+        if w != p:
+            driver.switch_to.window(w)
+    time.sleep(15)
     driver.find_element(By.ID, "ext-gen37").click()
     time.sleep(5)
     driver.find_element(By.ID, "!~objectHandle~partHandle~!createType").click()
