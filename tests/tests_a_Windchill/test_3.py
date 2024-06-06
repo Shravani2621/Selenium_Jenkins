@@ -40,7 +40,7 @@ def test():
     # driver.find_element(By.ID, "PTC_WC_DESCRIPTION").send_keys("Selenium Testing")
     # time.sleep(2)
     # driver.find_element(By.ID, "edit_wizard_save").click()
-    driver.find_element(By.ID, "edit_wizard_checkin").click()
+    driver.find_element(By.ID, "ext-gen538").click()
     time.sleep(5)
     driver.find_element(By.ID, "PJL_wizard_ok").click()
     time.sleep(5)
