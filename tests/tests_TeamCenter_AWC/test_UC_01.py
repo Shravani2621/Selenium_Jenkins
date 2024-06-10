@@ -46,12 +46,12 @@ def test():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
     # driver.find_element(By.CSS_SELECTOR, ".sw-aria-border.aw-widgets-cellListItem.aw-widgets-cellTop").click()
-    time.sleep(5)
+    time.sleep(25)
     if driver.find_element(By.XPATH, "//div[@class='sw-lov-container aw-widgets-droppable']/child::input") == "true":
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
     driver.find_element(By.NAME, "object_name").send_keys("TestItem")
-    time.sleep(5)
+    time.sleep(25)
     driver.find_element(By.CSS_SELECTOR, ".aw-panel-footer.sw-row.flex-wrap > .sw-button").click()
     time.sleep(5)
 
