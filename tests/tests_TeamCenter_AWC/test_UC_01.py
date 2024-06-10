@@ -11,7 +11,7 @@ from selenium.webdriver import Chrome
 
 #@pytest.mark.login
 def test():
-    driver = webdriver.Edge()
+    driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
