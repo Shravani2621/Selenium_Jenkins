@@ -29,7 +29,7 @@ def test():
     # driver.find_element(By.NAME, "password").send_keys("infodba")
     # time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".sw-button.accent-caution").click()
-    #time.sleep(10)
+    # time.sleep(10)
     # driver.find_element(By.CSS_SELECTOR,
     #                     ".sw-column.aw-tile-tileContainer.aw-theme-locationsTile.aw-tile-smallSize").click()
     # time.sleep(5)
