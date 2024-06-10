@@ -9,17 +9,9 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def wait_for_window(self, timeout=2):
-    time.sleep(round(timeout / 1000))
-    wh_now = self.driver.window_handles
-    wh_then = self.vars["window_handles"]
-    if len(wh_now) > len(wh_then):
-        return set(wh_now).difference(set(wh_then)).pop()
-
-
-@pytest.mark.login
+# @pytest.mark.login
 def test():
-    driver = webdriver.Edge()
+    driver = Chrome()
     domain = "http://inbr2wks-249497:3000/"
     driver.get(domain)
     time.sleep(2)
