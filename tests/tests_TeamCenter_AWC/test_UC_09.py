@@ -31,7 +31,7 @@ def test():
     c2 = sheet.cell(row=2, column=7)
     driver.find_element(By.NAME, "username").send_keys(c1.value)
     driver.find_element(By.NAME, "password").send_keys(c1.value)
-    time.sleep(5)
+    time.sleep(15)
 
     # driver.find_element(By.NAME, "username").send_keys("infodba")
     # driver.find_element(By.NAME, "password").send_keys("infodba")
