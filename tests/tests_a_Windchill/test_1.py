@@ -45,7 +45,7 @@ def test():
     driver.find_element(By.ID, "ext-comp-1058").click()
     time.sleep(5)
     p = driver.current_window_handle
-    time.sleep(10)
+    time.sleep(20)
     chwd = driver.window_handles
     for w in chwd:
         if w != p:
