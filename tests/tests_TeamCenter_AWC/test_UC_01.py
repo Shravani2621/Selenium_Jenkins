@@ -18,12 +18,12 @@ def test():
     path = r"C:\Users\sss927832\Selenium+TC\Selenium+TC\Book1.xlsx"
     b = openpyxl.load_workbook(path)
     sheet = b.active
-    c1 = sheet.cell(row=5, column=1)
-    # driver.find_element(By.NAME, "username").send_keys("infodba")
+    c1 = sheet.cell(row=2, column=5)
+    c2 = sheet.cell(row=2, column=7)
     driver.find_element(By.NAME, "username").send_keys(c1.value)
-    # driver.find_element(By.NAME, "password").send_keys("infodba")
     driver.find_element(By.NAME, "password").send_keys(c1.value)
     time.sleep(5)
+
     driver.find_element(By.CSS_SELECTOR, ".sw-button.accent-caution").click()
     time.sleep(40)
     driver.find_element(By.CSS_SELECTOR,
